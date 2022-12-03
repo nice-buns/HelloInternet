@@ -2,8 +2,34 @@
 <html>
   <head>
     <title>TITLE</title>
+    <style>
+        .t1 {
+            font-size: 48px;
+        }
+
+        .button1 {
+            font-size: 36px;
+        }
+    </style>
   </head>
   <body>
-    <p>HI MEG</p>
+    <p id="t1">HI MEG</p>
+    <button id="button1" type="button">Add "an"</button>
+
+    <script>
+        function clickHandle() {
+            let b = document.getElementById('button1');
+            let t1 = document.getElementById('t1');
+
+            if (b.innerHTML.charAt(0) === 'A') {
+                b.innerHTML = 'Remove "an"';
+                t1.innerHTML = 'HI MEGAN';
+            } else {
+                b.innerHTML = 'Add "an"';
+                t1.innerHTML = 'HI MEG';
+            }
+            return;
+        }
+    </script>
   </body>
 </html>
